@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ly Academy | Premium English School</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ly Academy | Home</title>
+    <meta name="description" content="Check course fees and flexible payment options at Ly Academy. Affordable English education in Helsinki.">
+    <meta name="keywords" content="English School, Helsinki, IELTS, Business English, Ly Academy">
+    <meta name="author" content="Ly Franckenhaeuser">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -22,22 +24,43 @@
 
         .navbar { background-color: var(--primary-theme) !important; 
         }
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
+        .nav-link { transition: 0.3s; margin: 0 5px; }
+        .nav-link:hover { opacity: 0.8; }
+
+        .carousel-item { 
+            height: 400px; 
+            overflow: hidden; 
+            position: relative;
+            background-color: #000; 
         }
 
+
         .carousel-item img { 
-            height: 500px; 
-            object-fit: cover; 
-            filter: brightness(0.7);
+            height: 100% !important; 
+            width: 100% !important;
+            object-fit: cover;
+            transform: scale(1.3); 
+            transform-origin: right center; 
+            filter: brightness(65%);
+        }
+        .carousel-caption {
+            background: none !important; 
+            bottom: 30%;
+            z-index: 10;
+        }
+        .carousel-caption h1, .carousel-caption p {
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /
         }
         @media (max-width: 768px) {
-            .carousel-item img { height: 400px; }
-            .carousel-caption h1 { font-size: 2rem; }
-            }
+            .carousel-item { height: 250px; }
+            .carousel-item img { 
+            transform: scale(1.6); 
+            transform-origin: right center; 
+        }
+        .carousel-caption h1 { font-size: 2rem; }
+        }
         .section-padding { padding: 90px 0; }
+        .bg-pastel { background-color: var(--pastel); }
 
         .card {
             height: 100%;
@@ -60,7 +83,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-graduation-cap me-2"></i> 
                 <span>LY ACADEMY</span>
             </a>
@@ -69,12 +92,12 @@
             </button>
             <div class="collapse navbar-collapse" id="mainNavigation">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="#courses">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="faq.html">FAQ</a></li>
                     
-                   <li class="nav-item d-flex align-items-center"><a class="btn btn-light text-success fw-bold shadow-sm ms-lg-3 px-4 rounded-pill" href="#contact">Contact</a></li>
+                   <li class="nav-item d-flex align-items-center"><a class="btn btn-light text-success fw-bold shadow-sm ms-lg-3 px-4 rounded-pill" href="contact.html">Contact</a></li>
                     
                     <li class="nav-item ms-lg-4 d-flex gap-3 mt-3 mt-lg-0">
                         <a href="#" class="text-white opacity-75 hvr-scale"><i class="fab fa-facebook-f"></i></a>
@@ -85,128 +108,90 @@
             </div>
         </div>
     </nav>
-
+    <main>
     <header id="home" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/banner.jpg" class="d-block w-100" alt="Banner">
-                <div class="carousel-caption bg-dark bg-opacity-50 rounded-4 p-4">
+                <div class="carousel-caption ">
                     <h1 class="display-3 fw-bold">Master Your English</h1>
-                    <p class="lead">Top-tier language training located in Helsinki.</p>
+                    <p class="fw-bold lead">Top-tier language training located in Helsinki.</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="courses" class="container section-padding">
-        <h2 class="text-center fw-bold mb-5 text-success">Our Courses</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="images/IELTS.jpg" class="card-img-top" alt="IELTS">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="fw-bold text-success">IELTS Intensive</h5>
-                        <p class="text-muted small">Specialized techniques to reach your target band score.</p>
-                        <a href="#contact" class="btn btn-success mt-auto">Enroll Now</a>
+        <section class="section-padding">
+            <div class="container text-center">
+                <h2 class="fw-bold text-success mb-5">Why Ly Academy?</h2>
+                <div class="row g-5">
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <i class="fas fa-user-check fa-3x mb-4" style="color: #a5d6a7;"></i>
+                            <h4 class="fw-bold">Expert Tutors</h4>
+                            <p class="text-muted">Learn from native speakers with international teaching certificates.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <i class="fas fa-laptop-house fa-3x mb-4" style="color: #a5d6a7;"></i>
+                            <h4 class="fw-bold">Modern Method</h4>
+                            <p class="text-muted">Interactive lessons designed for real-world communication.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <i class="fas fa-map-marked-alt fa-3x mb-4" style="color: #a5d6a7;"></i>
+                            <h4 class="fw-bold">Helsinki Campus</h4>
+                            <p class="text-muted">State-of-the-art facilities located conveniently in the city center.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="images/Business.jpg" class="card-img-top" alt="Business">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="fw-bold text-success">Business English</h5>
-                        <p class="text-muted small">Professional communication for global careers.</p>
-                        <a href="#contact" class="btn btn-success mt-auto">Enroll Now</a>
+        </section>
+
+        <section id="courses" class="section-padding bg-pastel border-top">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-success">Our Popular Programs</h2>
+                    <p class="text-muted">Achieve your goals with our curated English courses.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card custom-card">
+                            <img src="images/IELTS.jpg" class="card-img-top" alt="IELTS">
+                            <div class="card-body p-4 text-center d-flex flex-column">
+                                <h5 class="fw-bold text-success mb-3">IELTS Intensive</h5>
+                                <p class="text-muted small mb-4">Target your desired band score with our 12-week intensive program.</p>
+                                <a href="courses.html" class="btn btn-success rounded-pill mt-auto shadow-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card custom-card">
+                            <img src="images/Business.jpg" class="card-img-top" alt="Business">
+                            <div class="card-body p-4 text-center d-flex flex-column">
+                                <h5 class="fw-bold text-success mb-3">Business English</h5>
+                                <p class="text-muted small mb-4">Advance your career with professional global communication skills.</p>
+                                <a href="courses.html" class="btn btn-success rounded-pill mt-auto shadow-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card custom-card">
+                            <img src="images/General.jpg" class="card-img-top" alt="General">
+                            <div class="card-body p-4 text-center d-flex flex-column">
+                                <h5 class="fw-bold text-success mb-3">General English</h5>
+                                <p class="text-muted small mb-4">Improve your fluency for everyday conversations and international travel.</p>
+                                <a href="courses.html" class="btn btn-success rounded-pill mt-auto shadow-sm">View Details</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="images/General.jpg" class="card-img-top" alt="General">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="fw-bold text-success">General English</h5>
-                        <p class="text-muted small">Build fluency for real-world daily conversations.</p>
-                        <a href="#contact" class="btn btn-success mt-auto">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="bg-light section-padding">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-4 text-success">Course Fees</h2>
-            <div class="table-responsive shadow bg-white p-4 rounded-4">
-                <table class="table table-hover align-middle text-center">
-                    <thead class="table-success text-success">
-                        <tr>
-                            <th>Program</th>
-                            <th>Duration</th>
-                            <th>Schedule</th>
-                            <th>Fee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="fw-bold">IELTS Intensive</td><td>12 Weeks</td><td>Mon-Wed-Fri</td><td>€450</td></tr>
-                        <tr><td class="fw-bold">Business English</td><td>8 Weeks</td><td>Tue-Thu</td><td>€380</td></tr>
-                        <tr><td class="fw-bold">General English</td><td>10 Weeks</td><td>Sat-Sun</td><td>€320</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="container section-padding">
-        <h2 class="text-center fw-bold mb-4 text-success">Common Questions</h2>
-        <div class="accordion w-75 mx-auto" id="academyAccordion">
-            
-            <div class="accordion-item shadow-sm mb-2">
-                <h2 class="accordion-header">
-                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
-                        Are classes in-person?
-                    </button>
-                </h2>
-                <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#academyAccordion">
-                    <div class="accordion-body">Yes, all programs are held at our Helsinki campus.</div>
-                </div>
-            </div>
-
-            <div class="accordion-item shadow-sm mb-2">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
-                        Can I change my class schedule?
-                    </button>
-                </h2>
-                <div id="c2" class="accordion-collapse collapse" data-bs-parent="#academyAccordion">
-                    <div class="accordion-body">
-                        Certainly! You can switch between morning and evening sessions within the first week of the course.
-                    </div>
-                </div>
-            </div>
-            
-        </div> 
-    </section>
-
-    <section id="contact" class="bg-light section-padding border-top">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="card p-4 border-0 shadow">
-                        <h2 class="text-center fw-bold mb-4 text-success">Contact Us</h2>
-                        <form>
-                            <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name" required></div>
-                            <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" required></div>
-                            <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your message" required></textarea></div>
-                    
-                            <button type="submit" class="btn btn-success w-100 py-2 fw-bold">SEND MESSAGE</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
+  
     <footer class="py-5 bg-dark text-secondary">
         <div class="container">
             <div class="row row-cols-md-3 text-center align-items-start">
@@ -215,7 +200,7 @@
                     <h4 class="fw-bold text-white">LY ACADEMY</h4>
                     <p class="small">Mastering English for a brighter future.We provide high-quality training and career support in Finland.</p>
                 </div>
-            
+                
                 <div>
                     <h4 class="fw-bold text-white">Connect</h4>
                     <p class="small mb-1"><i class="fas fa-envelope text-success me-2"></i> contact@lyacademy.fi</p>
@@ -232,12 +217,9 @@
                 </div>
             </div>
             <hr class="mt-5 opacity-25 border-secondary">
-            <p class="text-center small">&copy; 2026 Ly Academy. All rights reserved.</p>
-            </div>
+            <p class="text-center small">&copy; 2026 Ly Academy. All rights reserved.</p>    
         </div>
-
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

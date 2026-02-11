@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing |Ly Academy</title>
+    <meta name="description" content="Check course fees and flexible payment options at Ly Academy. Affordable English education in Helsinki.">
+    <meta name="keywords" content="English School, Helsinki, IELTS, Business English, Ly Academy">
+    <meta name="author" content="Ly Franckenhaeuser">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-theme: var(--bs-success);
+            --dark-footer: var(--bs-gray-900);
+            --section-bg: var(--bs-gray-100);
+        }
+
+        body { 
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth; 
+        }
+
+        .navbar { background-color: var(--primary-theme) !important; 
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+        .nav-link.active {
+            opacity: 1 !important;
+            border-bottom: 2px solid white; 
+        }
+        .section-padding { padding: 90px 0; }
+
+        .card {
+            height: 100%;
+            border: none;
+            box-shadow: var(--bs-box-shadow-sm);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card-img-top { height: 220px; object-fit: cover; }
+
+        footer {
+            background-color: var(--dark-footer);
+            color: var(--bs-gray-500);
+            padding: 60px 0;
+        }
+        footer h5 { color: var(--bs-white); }
+        .hvr-scale:hover { transform: scale(1.2); transition: 0.3s; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i> 
+                <span>LY ACADEMY</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="faq.html">FAQ</a></li>
+                    
+                   <li class="nav-item d-flex align-items-center"><a class="btn btn-light text-success fw-bold shadow-sm ms-lg-3 px-4 rounded-pill" href="contact.html">Contact</a></li>
+                    
+                    <li class="nav-item ms-lg-4 d-flex gap-3 mt-3 mt-lg-0">
+                        <a href="#" class="text-white opacity-75 hvr-scale"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white opacity-75 hvr-scale"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white opacity-75 hvr-scale"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="alku" class="container-fluid p-0">
+        <section id="pricing" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-success display-5">Course Fees</h2>
+                    <p class="text-muted">Investment for your successful future in Finland.</p>
+                </div>
+                
+                <div class="table-responsive shadow-lg bg-white p-4 rounded-4">
+                    <table class="table table-hover align-middle text-center">
+                        <thead class="table-success">
+                            <tr class="text-success">
+                                <th class="py-3">Program</th>
+                                <th class="py-3">Duration</th>
+                                <th class="py-3">Schedule</th>
+                                <th class="py-3">Fee</th>
+                                <th class="py-3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">IELTS Intensive</td>
+                                <td>12 Weeks</td>
+                                <td>Mon-Wed-Fri</td>
+                                <td class="text-success fw-bold">€450</td>
+                                <td><a href="contact.html" class="btn btn-sm btn-success rounded-pill px-4">Join Class</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Business English</td>
+                                <td>8 Weeks</td>
+                                <td>Tue-Thu</td>
+                                <td class="text-success fw-bold">€380</td>
+                                <td><a href="contact.html" class="btn btn-sm btn-success rounded-pill px-4">Join Class</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">General English</td>
+                                <td>10 Weeks</td>
+                                <td>Sat-Sun</td>
+                                <td class="text-success fw-bold">€320</td>
+                                <td><a href="contact.html" class="btn btn-sm btn-success rounded-pill px-4">Join Class</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+    </section>
+    <footer class="py-5 bg-dark text-secondary">
+        <div class="container">
+            <div class="row row-cols-md-3 text-center align-items-start">
+            
+                <div class="text-md-start">
+                    <h4 class="fw-bold text-white">LY ACADEMY</h4>
+                    <p class="small">Mastering English for a brighter future.We provide high-quality training and career support in Finland.</p>
+                </div>
+                
+                <div>
+                    <h4 class="fw-bold text-white">Connect</h4>
+                    <p class="small mb-1"><i class="fas fa-envelope text-success me-2"></i> contact@lyacademy.fi</p>
+                    <p class="small"><i class="fas fa-phone text-success me-2"></i> +358 40 123 4567</p>
+                </div>
+
+                <div class="text-md-end">
+                    <h4 class="fw-bold text-white">Follow Us</h4>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-2">
+                        <a href="#" class="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25 border-secondary">
+            <p class="text-center small">&copy; 2026 Ly Academy. All rights reserved.</p>    
+        </div>
+    </footer>
+      </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
